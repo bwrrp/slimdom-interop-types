@@ -1,6 +1,6 @@
 {
 	"name": "slimdom-interop-types",
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"description": "Minimal TypeScript typings for slimdom / lib.dom.d.ts interop",
 	"scripts": {
 		"test": "jest --coverage --verbose"
