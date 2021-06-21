@@ -1,0 +1,40 @@
+{
+	"name": "slimdom-interop-types",
+	"version": "1.0.0",
+	"description": "Minimal TypeScript typings for slimdom / lib.dom.d.ts interop",
+	"scripts": {
+		"test": "jest --coverage --verbose"
+	},
+	"author": "Stef Busking",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/jest": "^26.0.23",
+		"jest": "^27.0.4",
+		"prettier": "^2.3.1",
+		"slimdom": "^2.3.2",
+		"ts-jest": "^27.0.3",
+		"typescript": "^4.3.4"
+	},
+	"jest": {
+		"transform": {
+			"^.+\\.(t|j)sx?$": "ts-jest"
+		},
+		"testRegex": "(\\.(tests))\\.(tsx?|jsx?)$",
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"json",
+			"jsx"
+		],
+		"collectCoverageFrom": [
+			"src/**/*.ts"
+		]
+	},
+	"prettier": {
+		"printWidth": 100,
+		"singleQuote": true,
+		"tabWidth": 4,
+		"useTabs": true
+	}
+}
