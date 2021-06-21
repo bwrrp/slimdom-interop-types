@@ -16,7 +16,7 @@ export interface DocumentReadOnly<TTypes extends Types> {
 	// 	localName: string
 	// ): NodeListOrArray<TTypes['Element']>;
 
-	// TODO: importNode<TNewNode extends TTypes['Node']>(node: TNewNode, deep?: boolean): TNewNode;
+	importNode(node: TTypes['Node'], deep?: boolean): TTypes['Node'];
 }
 
 export interface DocumentMutable<TTypes extends Types> {
@@ -30,5 +30,5 @@ export interface DocumentMutable<TTypes extends Types> {
 	createComment(data: string): TTypes['Comment'];
 	createProcessingInstruction(target: string, data: string): TTypes['ProcessingInstruction'];
 
-	// TODO: adoptNode<TNewNode extends TTypes['Node']>(node: TNewNode): TNewNode;
+	adoptNode(node: TTypes['Node']): TTypes['Node'];
 }

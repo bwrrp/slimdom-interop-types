@@ -10,7 +10,8 @@ export interface ParentNodeReadOnly<TTypes extends Types> {
 }
 
 export interface ParentNodeMutable<TTypes extends Types> {
-	// TODO: prepend(...nodes: (TTypes['Node'] | string)[]): void;
-	// TODO: append(...nodes: (TTypes['Node'] | string)[]): void;
-	// TODO: replaceChildren(...nodes: (TTypes['Node'] | string)[]): void;
+	prepend(...nodes: (TTypes['Node'] | string)[]): void;
+	append(...nodes: (TTypes['Node'] | string)[]): void;
+	// TODO: not yet released in slimdom
+	// replaceChildren(...nodes: (TTypes['Node'] | string)[]): void;
 }

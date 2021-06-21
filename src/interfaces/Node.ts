@@ -33,7 +33,7 @@ export interface NodeReadOnly<TTypes extends Types> {
 	get textContent(): string | null;
 
 	hasChildNodes(): boolean;
-	// TODO: contains<TOther extends TTypes['Node']>(other: TOther | null): boolean;
+	contains(other: TTypes['Node'] | null): boolean;
 
 	cloneNode(deep?: boolean): this;
 
@@ -46,10 +46,10 @@ export interface NodeMutable<TTypes extends Types> {
 	set nodeValue(value: string | null);
 	set textContent(value: string | null);
 
-	// TODO: insertBefore<TNewNode extends TTypes['Node']>(node: TNewNode, child: TTypes['Node']): TNewNode;
-	// TODO: appendChild<TNewNode extends TTypes['Node']>(node: TNewNode): TNewNode;
-	// TODO: replaceChild<TChild extends TTypes['Node']>(node: TTypes['Node'], child: TChild): TChild;
-	// TODO: removeChild<TChild extends TTypes['Node']>(child: TChild): TChild;
+	insertBefore(node: TTypes['Node'], child: TTypes['Node']): TTypes['Node'];
+	appendChild(node: TTypes['Node']): TTypes['Node'];
+	replaceChild(node: TTypes['Node'], child: TTypes['Node']): TTypes['Node'];
+	removeChild(child: TTypes['Node']): TTypes['Node'];
 
 	normalize(): void;
 }
